@@ -112,6 +112,20 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="ActorModel\ActorSystemReferences.cs" />
+    <Compile Include="ActorModel\Actors\StockActor.cs" />
+    <Compile Include="ActorModel\Actors\StockCoordinatorActor.cs" />
+    <Compile Include="ActorModel\Actors\StockPriceLookupActor.cs" />
+    <Compile Include="ActorModel\Messages\AddChartSeriesMessage.cs" />
+    <Compile Include="ActorModel\Messages\RefreshStockPriceMessage.cs" />
+    <Compile Include="ActorModel\Messages\RemoveChartSeriesMessage.cs" />
+    <Compile Include="ActorModel\Messages\StockPriceMessage.cs" />
+    <Compile Include="ActorModel\Messages\SubscribeToNewStockPriceMessage.cs" />
+    <Compile Include="ActorModel\Messages\UnSubscribeFromNewStockPriceMessage.cs" />
+    <Compile Include="ActorModel\Messages\UnWatchStockMessage.cs" />
+    <Compile Include="ActorModel\Messages\UpdatedStockPriceMessage.cs" />
+    <Compile Include="ActorModel\Messages\WatchStockMessage.cs" />
+    <Compile Include="ExternalServices\IStockPriceServiceGateway.cs" />
+    <Compile Include="ExternalServices\RandomStockPriceServiceGateway.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />
     <Compile Include="ViewModel\ViewModelLocator.cs" />
     <Page Include="MainWindow.xaml">
@@ -157,7 +171,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="ActorModel\Actors\UI\" />
-    <Folder Include="ActorModel\Messages\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
