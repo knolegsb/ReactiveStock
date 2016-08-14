@@ -115,6 +115,7 @@
     <Compile Include="ActorModel\Actors\StockActor.cs" />
     <Compile Include="ActorModel\Actors\StockCoordinatorActor.cs" />
     <Compile Include="ActorModel\Actors\StockPriceLookupActor.cs" />
+    <Compile Include="ActorModel\Actors\UI\LineChartingActor.cs" />
     <Compile Include="ActorModel\Actors\UI\StockToggleButtonActor.cs" />
     <Compile Include="ActorModel\Messages\AddChartSeriesMessage.cs" />
     <Compile Include="ActorModel\Messages\FlipToggleMessage.cs" />
