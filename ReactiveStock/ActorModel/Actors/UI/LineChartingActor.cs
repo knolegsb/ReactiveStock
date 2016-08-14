@@ -65,6 +65,7 @@ namespace ReactiveStock.ActorModel.Actors.UI
                 var series = _series[message.StockSymbol];
                 var newDataPoint = new DataPoint(DateTimeAxis.ToDouble(message.Date), LinearAxis.ToDouble(message.StockPrice));
                 
+                // Keep the last 10 data points on graph
                 if(series.Points.Count > 10)
                 {
                     series.Points.RemoveAt(0);
@@ -77,7 +78,7 @@ namespace ReactiveStock.ActorModel.Actors.UI
 
         private void RefreshChart()
         {
-            throw new NotImplementedException();
+            _chartModel.InvalidatePlot(true);
         }
     }
 }
